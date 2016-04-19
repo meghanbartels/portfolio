@@ -41,6 +41,7 @@
   }
 
   img {
+    width: 100%;
     margin: auto;
     display: block;
   }
@@ -198,7 +199,6 @@
 
   #contact .section{
     min-height: 200px
-    text-align: center;
   }
 
 /* End of regular CSS */
@@ -404,9 +404,10 @@
 
 
     <div id="contact"> <!-- beginning of contact -->
-      <h2>Say hello</h2>
-        <img src="me.jpg" height="250" width="250">
-        <p><a href="http://www.twitter.com/meghanbartels" target="_blank">Find me on Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:mmb706@nyu.edu">Email me</a></p>
+      <div class="inner">
+        <h2>Say hello</h2>
+        <div class="image"><a href="http://www.twitter.com/meghanbartels" target="_blank"><img src="me.jpg"></a></div>
+        <p><a href="http://www.twitter.com/meghanbartels" target="_blank">Find me on Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:mmb706@nyu.edu">Email me</a></p></div>
     </div> <!-- end of contact -->
 
 
