@@ -9,22 +9,18 @@
   <title>Meghan Bartels</title>
 
   <style type="text/css">
-
 /* Beginning of CSS */
-
   * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
   }
-
   body {
     background: #C4D8E2;
     font-family: 'Bitter', serif;
     margin:0px auto;
   }
-
   .image {
     display: inline-block;
     width: auto;
@@ -35,24 +31,20 @@
     opacity: 1;
     cursor: pointer;
   }
-
   .image:hover {
     opacity: .8
   }
-
   img {
     width: 100%;
     margin: auto;
     display: block;
   }
-
   .header li, a, .button, h3, .image{
       transition: all 0.10s ease-in-out;
     -webkit-transition: all 0.10s ease-in-out;
     -moz-transition: all 0.10s ease-in-out;
     -o-transition: all 0.10s ease-in-out;
   }
-
   .header {
     width: 100%;
     top:0px;
@@ -64,13 +56,11 @@
     border-bottom: 1px solid #f5f1ef;
     display: inline-block;
   }
-
   .header ul {
     margin: auto;
     display: inline-block;
     padding: 0px;
   }
-
   .header li {
     float: left;
     padding: 10px 20px 10px 0px;
@@ -78,33 +68,26 @@
     list-style-type: none;
     height:40px;
   }
-
   .header li h3 {
     border-left: 1px solid #B2AB9E;
     padding-left: 20px;
   }
-
   .header li:first-child h3{
     border-left:0px;
   }
-
   .header li.active a {
     color: rgba(196,216,226,.8);
   }
-
   .header li a {
     color:#fff;
   }
-
   a {
     color:rgba(0,0,0,.8);
     text-decoration: none;
   }
-
   a:hover {
     color:rgba(0,0,128,.8);
   }
-
   #container {
     color: #333;
     width: 100%;
@@ -112,7 +95,6 @@
     font-weight: 200;
     text-align: center;
   }
-
   #container .inner {
     max-width: 960px;
     width: 95%;
@@ -120,38 +102,32 @@
     padding:0px 0px;
     display: inline-block;
   }
-
   #container .inner.double {
     float: left;
     width: 50%;
   }
-
   #container .inner.triple {
     float: left;
     width: 33%;
   }
-
   .inner.triple p {
     max-width: 300px;
     margin: auto;
     width: 100%;
     height:50px
   }
-
   h1 {
     font-size: 70px;
     color:#565656;
     font-weight: 200;
     margin: 40px 0px 20px
   }
-
   h2 {
     font-size: 40px;
     color:#565656;
     margin:50px 0px 0px 0px;
     font-weight: 200;
   }
-
   h3 {
     font-family: "Lato:400", serif;
     text-transform: uppercase;
@@ -169,90 +145,68 @@
     font-weight: 300;
     line-height: 1.5em
   }
-
   #container > div {
     padding-top:10px;
     display: inline-block;
     width: 100%
   }
-
   .section {
     border-bottom: 1px solid #cecece;
     padding: 10px 0px;
     display: inline-block;
     width: 100%;
   }
-
   .footer .section{
-    height: 200px;
+    height: 100px;
     margin: 0px;
-    border:0px;
+     border:0px;
   }
-
   .footer {
     background: #222;
   }
-
   .footer p {
     color: #fff
   }
-
   #contact .section{
     min-height: 200px
   }
-
 /* End of regular CSS */
-
-
-
 /* Beginning of CSS for mobile */
-
   @media screen and (max-width: 480px){ 
     
     p {
       margin-bottom: 0px
     }
-
     h1 {
       font-size: 50px;
     }
-
     h2 {
       font-size: 30px
     }
-
     header li {
       padding:10px 8px 10px 0px;
     }
-
     header li h3 {
       padding-left:8px;
     }
-
     .image {
       width: 100%;
       max-width: 300px
     }
-
     #container .inner.double, #container .inner.triple {
       max-width: 300px;
       width: 100%;
       float: none;
       margin: 30px auto 0px;
     }
-
     #home p {
       padding:0px 50px;
     }
-
     .inner.triple p {
       height: auto
     }
-
   }
-
   /* End of CSS for mobile*/
-
   </style>
 
 
@@ -404,10 +358,13 @@
 
 
     <div id="contact"> <!-- beginning of contact -->
-      <div class="section">
-        <h2>Say hello</h2>
-        <div class="inner"><p><a href="http://www.twitter.com/meghanbartels" target="_blank">Find me on Twitter</a><br /><a href="mailto:mmb706@nyu.edu">Email me</a></p></div>
+      <h2>Say hi</h2>
+      <div class="inner triple">&nbsp;</div>
+      <div class="inner triple">
+      <div class="image"><a href="http://www.twitter.com/meghanbartels" target="_blank"><img src="me.jpg" height="250" width="250"></a></div>
+        <p><a href="http://www.twitter.com/meghanbartels" target="_blank">Find me on Twitter</a><br /><a href="mailto:mmb706@nyu.edu">Email me</a></p>
       </div>
+      <div class="inner triple">&nbsp;</div>
     </div> <!-- end of contact -->
 
 
@@ -426,21 +383,15 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-
   $('.header a').click(function(e) {
     e.preventDefault();
     var curInx = this.hash;
     var target = $(curInx);
     var targetOffset = target.offset().top;
-
     $("body").animate({scrollTop:targetOffset}, 400, function() {
       location.hash = curInx;
     });
-
-
   });
-
-
   $(window).scroll(function() {
       var sticky = function(index) {
         $('li').removeClass('active'), $('.' + index + '-nav').addClass('active');
@@ -455,11 +406,8 @@
         }
     });
   });
-
   });
-
 </script>
 
 </body> <!-- end of body -->
-
 
